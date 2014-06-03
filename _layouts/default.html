@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Personal blog of {{ site.name }}, all about programmings">
+      <meta name="author" content="{{ site.author }}">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/css/syntax.css">
+      <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/favicon.ico" type="image/x-icon">
+      <link rel="alternate" type="application/atom+xml" href="/atom.xml">
+      <title>{{ page.title }}</title>
+   </head>
+   
+   <body>
+      <main>
+         <header>
+            <div class="social-links">
+               <a class="social-icon social-icon-github" href="https://github.com/rezigned"><img src="https://raw.githubusercontent.com/danleech/simple-icons/master/icons/github/github-32-black.png" /></a>
+               <a class="social-icon social-icon-twitter" href="https://twitter.com/rezigned"><img src="https://raw.githubusercontent.com/danleech/simple-icons/master/icons/twitter/twitter-32.png" /></a>
+            </div>
+            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+         </header>
+
+         {{ content }}
+      </main>
+      <footer>
+      </footer>   
+   <script type="text/javascript">
+
+   // open external link in new window
+   var links = document.querySelectorAll('a[href^=http]');
+   for(var i=links.length, link; link=links[--i];) {
+      link.setAttribute('target', '_blank');
+   }
+   </script>
+   </body>
+</html>

@@ -1,0 +1,13 @@
+name: "Rezigned"
+author: "Marut Khumtong"
+markdown: redcarpet
+highlighter: pygments
+permalink: :title
+exclude: [README.md, LICENSE, Makefile]
+disqus_enable: true
+disqus_shortname: rezigned
+
+# Information for the Atom feed
+gereksiz:
+   author: "Marut Khumtong"
+   email: "me@rezigned.com"
