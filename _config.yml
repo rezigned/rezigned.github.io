@@ -6,6 +6,7 @@ permalink: :title
 exclude: [README.md, LICENSE, Makefile]
 disqus_enable: true
 disqus_shortname: rezigned
+tracking_id: UA-28430747-1
 
 # Information for the Atom feed
 gereksiz:
