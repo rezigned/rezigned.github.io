@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Test d3 worldmap</title>
+</head>
+<body>
+
+      <style type="text/css"> 
+.tipsy {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "URW Gothic L", sans;
+  position: absolute;
+  z-index: 100000;
+}
+
+.tipsy-inner {
+  padding: 5px 8px 4px 8px;
+  background-color: #ceee5c;
+  color: #222;
+  max-width: 200px;
+  text-align: center;
+}
+
+.tipsy-inner {
+  border-radius: 3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.tipsy-arrow {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+}
+
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; }
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; }
+        </style>
+        <style type="text/css"> 
+body {
+  background-color: #111;
+}
+text {
+  font-size: 10px;
+  font-family: "Verdana", sans;
+  fill: #dfff6d;
+  text-rendering: optimizeLegibility;
+}
+text.active {
+  font-weight: bold;
+}
+text.inactive {
+  fill: #898;
+}
+text.title {
+  font-family: "Sawasdee", "URW Gothic L", sans;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+path.world {
+  stroke: #898;
+}
+path.worldoverlay {
+  stroke: none;
+  fill-opacity: 0;
+}
+path.worldoverlay:hover {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+path.cable {
+  stroke: #dfff6d;
+  fill: none;
+  stroke-linecap: round;
+}
+
+path.cable:hover {
+  stroke-width: 3px;
+}
+circle.origin {
+  stroke: #ceee5c;
+  stroke-width: 0.5;
+  fill: #dfff6d;
+  fill-opacity: 0.8;
+}
+circle.origin:hover {
+  stroke: #fff;
+  stroke-width: 3;
+}
+        </style>
+	<script type="text/javascript" src="d3.min.js"></script>
+	<script type="text/javascript" src="d3.geo.min.js"></script>
+	<script type="text/javascript" src="d3.layout.min.js"></script>
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="jquery.tipsy.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
