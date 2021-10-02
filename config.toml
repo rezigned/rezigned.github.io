@@ -1,0 +1,46 @@
+baseURL = "https://rezigned.com"
+languageCode = "en-us"
+title = "@rezigned"
+theme = "yinyang"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 2
+
+[author]
+  name = "Rezigned"
+  homepage = "https://rezigned.com"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+  [languages.th]
+    contentDir = "content/th"
+    languageName = "Thai"
+    weight = 2
+
+[params]
+mainSections = ["posts"]
+headTitle = "rezigned"
+Description = "Code is art - ∀𝑥 ∈ 𝑝𝑒𝑜𝑝𝑙𝑒, ∃𝑥 ♡ λ"
+# disqus = "rezigned" # disqus account name
+extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28430747-1"></script>'
+extraCSSFiles = ["css/index.css"]
+
+[[params.socials]]
+name = "About Me"
+link = "https://twitter.com/rezigned"
+
+[[params.socials]]
+name = "Github"
+link = "https://github.com/rezigned"
+postHeaderContent = ""
+postFooterContent = "<br/><br/><p>Subscribe to：<a target='_blank' href='https://mailchi.mp/a1a0d59e7a19/joway'>Joway's Blog</a></p>"
