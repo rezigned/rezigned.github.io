@@ -41,7 +41,7 @@ So, I was searching for these kind of apps but couldn't find one. Then, I decide
     </figcaption>
 </figure>
 
-You can check it out here https://github.com/rezigned/Mousemory.
+You can check it out here https://github.com/rezigned/Mousemory. (or [download here](https://github.com/rezigned/Mousemory/releases)).
 
 <p class="center">
     {{< donate >}}
