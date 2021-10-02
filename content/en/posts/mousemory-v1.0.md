@@ -8,7 +8,7 @@ draft: false
 <img style="margin: auto" src="" />
 <p>
 
-{{< image url="logo.png" width="100" >}}
+{{< image url="logo.png" width="200" >}}
 
 Introducing [Mousemory](https://github.com/rezigned/Mousemory)! A simple macOS utility app that remembers your cursor positions across multiple monitors.
 

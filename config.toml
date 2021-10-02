@@ -31,8 +31,9 @@ theme = "yinyang"
 mainSections = ["posts"]
 headTitle = "rezigned"
 Description = "Code is art - ∀𝑥 ∈ 𝑝𝑒𝑜𝑝𝑙𝑒, ∃𝑥 ♡ λ"
-extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28430747-1"></script>'
+extraHead = ''
 extraCSSFiles = ["css/index.css"]
+ga = "UA-28430747-1"
 
 [[params.socials]]
 name = "About Me"
