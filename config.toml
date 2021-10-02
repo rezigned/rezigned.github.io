@@ -31,7 +31,6 @@ theme = "yinyang"
 mainSections = ["posts"]
 headTitle = "rezigned"
 Description = "Code is art - ∀𝑥 ∈ 𝑝𝑒𝑜𝑝𝑙𝑒, ∃𝑥 ♡ λ"
-# disqus = "rezigned" # disqus account name
 extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28430747-1"></script>'
 extraCSSFiles = ["css/index.css"]
 
