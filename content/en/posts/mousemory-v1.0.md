@@ -2,6 +2,8 @@
 title: "Mousemory v1.0"
 date: 2021-10-02T10:43:56+07:00
 draft: false
+tags: ["swift", "macos"]
+categories: ["App"]
 ---
 
 <p style="text-align: center">
