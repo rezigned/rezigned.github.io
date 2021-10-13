@@ -1,0 +1,6 @@
+<div class="site-footer">
+{{ if in .Site.Params.mainSections .Type }}
+    <h3>Discussions</h3>
+    {{ .Site.Params.comments | safeHTML }}
+{{ end }}
+</div>
