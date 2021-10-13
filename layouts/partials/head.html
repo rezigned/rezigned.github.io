@@ -47,7 +47,8 @@
     {{ end }}
 
     {{ range .Site.Params.extraCSSFiles -}}
-    <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
+    {{ $style := resources.Get . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{- end }}
 
     <link href="{{ .Site.Params.staticPrefix }}{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml"
