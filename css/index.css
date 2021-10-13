@@ -12,6 +12,19 @@
     border-color: #d0d0d0;
 }
 
+/**
+ * Post footer
+ */
+.post .site-footer {
+    margin-top: 0;
+}
+.post .site-footer h3 {
+    margin-top: 0;
+}
+.post .site-footer .utterances {
+    max-width: 100%;
+}
+
 a {
     color: #2196f3;
 }
