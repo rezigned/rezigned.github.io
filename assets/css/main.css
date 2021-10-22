@@ -38,6 +38,7 @@ a {
     color: #2196f3;
 }
 .markdown-body code {
+    font-family: 'Noto Sans Mono', Courier, monospace;
     background-color: #e0f4fb;
 }
 .highlight pre>code {
@@ -45,6 +46,17 @@ a {
     /* font-family: 'Source Code Pro', Courier, monospace; */
     font-family: 'Noto Sans Mono', Courier, monospace;
     font-size: 0.8em;
+}
+li {
+    line-height: 1.8;
+}
+
+.notices {
+    padding: 10px 20px;
+    background-color: #f7f2ca;
+}
+.notices code {
+    background-color: #e5e1af;
 }
 
 figure {

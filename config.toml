@@ -14,17 +14,17 @@ theme = "yinyang"
     tabWidth = 2
 
 [author]
-  name = "Rezigned"
+  name = "rezigned"
   homepage = "https://rezigned.com"
 
 [languages]
   [languages.en]
     contentDir = "content/en"
-    languageName = "English"
+    languageName = "EN"
     weight = 1
   [languages.th]
     contentDir = "content/th"
-    languageName = "Thai"
+    languageName = "TH"
     weight = 2
 
 [params]
