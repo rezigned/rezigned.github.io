@@ -24,13 +24,27 @@
 .post .site-footer .utterances {
     max-width: 100%;
 }
+.post-content img {
+    margin: 0 auto;
+}
 
+/**
+ * Body
+ */
+body {
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+}
 a {
     color: #2196f3;
 }
-
-.post-content img {
-    margin: 0 auto;
+.markdown-body code {
+    background-color: #e0f4fb;
+}
+.highlight pre>code {
+    /* font-family: 'Fira Code', 'Source Code Pro', Courier, monospace; */
+    /* font-family: 'Source Code Pro', Courier, monospace; */
+    font-family: 'Noto Sans Mono', Courier, monospace;
+    font-size: 0.8em;
 }
 
 figure {
