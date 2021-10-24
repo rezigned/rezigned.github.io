@@ -10,22 +10,27 @@ theme = "yinyang"
   [markup.highlight]
     guessSyntax = true
     noClasses = true
-    style = "bw"
+    style = "dracula"
     tabWidth = 2
 
 [author]
-  name = "Rezigned"
+  name = "rezigned"
   homepage = "https://rezigned.com"
 
 [languages]
   [languages.en]
     contentDir = "content/en"
-    languageName = "English"
+    languageName = "EN"
     weight = 1
   [languages.th]
     contentDir = "content/th"
-    languageName = "Thai"
+    languageName = "TH"
     weight = 2
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
 
 [params]
 mainSections = ["posts"]
