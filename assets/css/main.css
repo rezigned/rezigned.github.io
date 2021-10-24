@@ -37,6 +37,9 @@ body {
 a {
     color: #2196f3;
 }
+.markdown-body {
+    /* font-size: 16px; */
+}
 .markdown-body code {
     font-family: 'Noto Sans Mono', Courier, monospace;
     background-color: #e0f4fb;
@@ -46,6 +49,14 @@ a {
     /* font-family: 'Source Code Pro', Courier, monospace; */
     font-family: 'Noto Sans Mono', Courier, monospace;
     font-size: 0.8em;
+}
+.related-content {
+    margin: 50px 0 0;
+}
+.caption {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
 }
 li {
     line-height: 1.8;

@@ -1,0 +1,7 @@
+{{- $parts := split .Inner "---" -}}
+{{- $size := div 12 (len $parts) -}}
+<div class="row">
+    {{- range $parts }}
+    <div class="col-xs-{{ $size }}">{{ . | markdownify }}</div>
+    {{- end }}
+</div>

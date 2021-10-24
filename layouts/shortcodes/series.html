@@ -1,0 +1,18 @@
+{{- $name := $.Page.Params.series }}
+{{- $posts := where .Site.RegularPages ".Params.series" "eq" $name -}}
+{{ if $posts }}
+
+This post is part of the series <i>{{ $name }}</i>
+
+<ol class="post-series">
+    {{ range $posts.ByDate }}
+    <li hugo-nav="{{ .RelPermalink }}">
+        {{ if eq .RelPermalink $.Page.RelPermalink }}
+        {{ .LinkTitle }}
+        {{ else }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+    </li>
+    {{ end }}
+</ol>
+{{ end }}
