@@ -159,7 +159,7 @@ Monad Transformers – Part 1: An Introduction
 </div>
 </div>
 <p><strong>Action with optional value</strong></p>
-<p>Same thing here. The <code>result &lt;- accept</code> call on the right, now returns <code>String</code> directly. No need for us to perform a pattern maching on the result like we did on previously (before, it returns <code>Maybe String</code>):</p>
+<p>Same thing here. The <code>result &lt;- accept</code> call on the right, now returns <code>String</code> directly. No need for us to perform a pattern matching on the result like we did on previously (before, it returns <code>Maybe String</code>):</p>
 <div class=row>
 <div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>result</span> <span style=color:#ff79c6>&lt;-</span> accept <span style=color:#6272a4>-- 1. result :: Maybe String</span>
 <span style=color:#ff79c6>case</span> result <span style=color:#ff79c6>of</span>   <span style=color:#6272a4>-- 2.</span>
