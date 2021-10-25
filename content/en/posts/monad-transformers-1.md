@@ -141,14 +141,14 @@ We can see that our transformer version on the right doesn't need to call `x <- 
 {{% half %}}
 ```hs
 map' f xs = do
-  x <- xs -- 1
+  x <- xs -- 1. x :: Maybe a
   return $ f <$> x
 ```
 {{% center %}}Before{{% /center %}}
 ---
 ```hs
 map'' f xs = f <$> xs
---
+-- `f` operates on `a` directly.
 --
 ```
 {{% center %}}After{{% /center %}}
@@ -156,20 +156,20 @@ map'' f xs = f <$> xs
 
 **Action with optional value**
 
-Same thing here. We're no longer need `result <- accept` call:
+Same thing here. The `result <- accept` call on the right, now returns `String` directly. No need for us to perform a pattern matching on the result like we did on previously (before, it returns `Maybe String`):
 
 {{% half %}}
 ```hs
-result <- accept -- 1
-case result of   -- 2
+result <- accept -- 1. result :: Maybe String
+case result of   -- 2.
   Nothing -> putStrLn "Quit"
   Just s  -> putStrLn $ s ++ ": Continue"
 ```
 {{% center %}}Before{{% /center %}}
 ---
 ```hs
-result <- accept'
-lift $ putStrLn $ r ++ ": Continue"
+result <- accept' -- 1. result :: String
+lift $ putStrLn $ result ++ ": Continue"
 --
 --
 ```
