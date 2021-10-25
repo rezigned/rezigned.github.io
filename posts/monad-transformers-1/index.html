@@ -148,27 +148,27 @@ Monad Transformers – Part 1: An Introduction
 <p>We can see that our transformer version on the right doesn&rsquo;t need to call <code>x &lt;- xs</code> to get access to <code>Maybe a</code> any more:</p>
 <div class=row>
 <div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>map&#39;</span> f xs <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>do</span>
-  x <span style=color:#ff79c6>&lt;-</span> xs <span style=color:#6272a4>-- 1</span>
+  x <span style=color:#ff79c6>&lt;-</span> xs <span style=color:#6272a4>-- 1. x :: Maybe a</span>
   return <span style=color:#ff79c6>$</span> f <span style=color:#ff79c6>&lt;$&gt;</span> x
 </code></pre></div><p><i class=caption>Before</i></p>
 </div>
 <div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>map&#39;&#39;</span> f xs <span style=color:#ff79c6>=</span> f <span style=color:#ff79c6>&lt;$&gt;</span> xs
-<span style=color:#6272a4>--</span>
+<span style=color:#6272a4>-- `f` operates on `a` directly.</span>
 <span style=color:#6272a4>--</span>
 </code></pre></div><p><i class=caption>After</i></p>
 </div>
 </div>
 <p><strong>Action with optional value</strong></p>
-<p>Same thing here. We&rsquo;re no longer need <code>result &lt;- accept</code> call:</p>
+<p>Same thing here. The <code>result &lt;- accept</code> call on the right, now returns <code>String</code> directly. No need for us to perform a pattern maching on the result like we did on previously (before, it returns <code>Maybe String</code>):</p>
 <div class=row>
-<div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>result</span> <span style=color:#ff79c6>&lt;-</span> accept <span style=color:#6272a4>-- 1</span>
-<span style=color:#ff79c6>case</span> result <span style=color:#ff79c6>of</span>   <span style=color:#6272a4>-- 2</span>
+<div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>result</span> <span style=color:#ff79c6>&lt;-</span> accept <span style=color:#6272a4>-- 1. result :: Maybe String</span>
+<span style=color:#ff79c6>case</span> result <span style=color:#ff79c6>of</span>   <span style=color:#6272a4>-- 2.</span>
   <span style=color:#8be9fd>Nothing</span> <span style=color:#ff79c6>-&gt;</span> putStrLn <span style=color:#f1fa8c>&#34;Quit&#34;</span>
   <span style=color:#8be9fd>Just</span> s  <span style=color:#ff79c6>-&gt;</span> putStrLn <span style=color:#ff79c6>$</span> s <span style=color:#ff79c6>++</span> <span style=color:#f1fa8c>&#34;: Continue&#34;</span>
 </code></pre></div><p><i class=caption>Before</i></p>
 </div>
-<div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>result</span> <span style=color:#ff79c6>&lt;-</span> accept&#39;
-<span style=color:#50fa7b>lift</span> <span style=color:#ff79c6>$</span> putStrLn <span style=color:#ff79c6>$</span> r <span style=color:#ff79c6>++</span> <span style=color:#f1fa8c>&#34;: Continue&#34;</span>
+<div class=col-xs-6><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-hs data-lang=hs><span style=color:#50fa7b>result</span> <span style=color:#ff79c6>&lt;-</span> accept&#39; <span style=color:#6272a4>-- 1. result :: String</span>
+<span style=color:#50fa7b>lift</span> <span style=color:#ff79c6>$</span> putStrLn <span style=color:#ff79c6>$</span> result <span style=color:#ff79c6>++</span> <span style=color:#f1fa8c>&#34;: Continue&#34;</span>
 <span style=color:#6272a4>--</span>
 <span style=color:#6272a4>--</span>
 </code></pre></div><p><i class=caption>After</i></p>
