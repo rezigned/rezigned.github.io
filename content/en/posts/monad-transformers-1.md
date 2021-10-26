@@ -156,7 +156,7 @@ map'' f xs = f <$> xs
 
 **Action with optional value**
 
-Same thing here. The `result <- accept` call on the right, now returns `String` directly. No need for us to perform a pattern matching on the result like we did on previously (before, it returns `Maybe String`):
+Same thing here. The `result <- accept` call on the right, now returns `String` directly. No need for us to perform a pattern matching on the result like we did previously (before, it returns `Maybe String`):
 
 {{% half %}}
 ```hs
@@ -178,8 +178,8 @@ lift $ putStrLn $ result ++ ": Continue"
 
 ## Summary
 
-In part 1. We started by showing what happened when we need to wrap our monadic values (i.e. `Maybe a`) in another type (`[]` and `IO`). We also showed a quick look of what will it look like when we use the *transformer* version.
+In part 1. We started by showing what happened when we need to wrap our monadic values (i.e. `Maybe a`) in another type (`[]` and `IO`). We also showed a glimpse of the *transformer* version that we'll cover in next post.
 
-In next post, we'll take a look in more details on how does it actually work.
+In [next post]({{< ref "monad-transformers-2" >}}), we'll take a look in more details on how does it actually work.
 
 {{% donate %}}
