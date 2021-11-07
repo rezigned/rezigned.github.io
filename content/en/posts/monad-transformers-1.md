@@ -109,7 +109,7 @@ main = IO ()
     Nothing -> putStrLn "Quit"
     Just s  -> putStrLn $ s ++ ": Continue"
 ```
-{{% center %}}**Example 1.2**: `IO` with optional value (`IO Maybe a`).{{% /center %}}
+{{% center %}}**Example 2.1**: `IO` with optional value (`IO Maybe a`).{{% /center %}}
 
 1. This is similar to what we did on previous example on `[Maybe a]`. We use binding arrow (`<-`) to access `Maybe String` value.
 2. Next, we perform pattern matching on the result.
@@ -125,7 +125,7 @@ In example 1.1. We use `<-` to extract `Maybe a` out from `[]`.
   return $ f <$> x
 ```
 
-Here again, in example 1.2. We use `<-` to extract `Maybe a` out from `IO`.
+Here again, in example 2.1. We use `<-` to extract `Maybe a` out from `IO`.
 ```hs {linenos=inline,hl_lines=[1],linenostart=11}
   result <- accept -- 1
   case result of

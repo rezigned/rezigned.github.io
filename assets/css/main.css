@@ -64,6 +64,7 @@ li {
 
 .notices {
     padding: 10px 20px;
+    line-height: 1.5em;
     background-color: #f7f2ca;
 }
 .notices code {

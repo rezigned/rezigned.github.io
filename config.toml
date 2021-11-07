@@ -38,8 +38,8 @@ headTitle = "rezigned"
 Description = "Code is art - ∀𝑥 ∈ 𝑝𝑒𝑜𝑝𝑙𝑒, ∃𝑥 ♡ λ"
 extraHead = ''
 extraCSSFiles = ["css/main.css"]
-ga = "UA-28430747-1"
-comments = '<script src="https://utteranc.es/client.js" repo="rezigned/rezigned.github.io" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>'
+# ga = "UA-28430747-1"
+# comments = '<script src="https://utteranc.es/client.js" repo="rezigned/rezigned.github.io" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>'
 
 [[params.socials]]
 name = "About Me"
