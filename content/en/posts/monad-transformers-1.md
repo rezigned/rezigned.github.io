@@ -71,7 +71,7 @@ In practice, we would define `map'` as `map' = fmap . fmap` instead. But here, w
 {{% /notice %}}
 
 {{< highlight hs "linenos=inline,hl_lines=3 4,linenostart=1,anchorlinenos=true,lineanchors=a" >}}
-map' :: (a -> a) -> [Maybe a] -> [Maybe a]
+map' :: (a -> b) -> [Maybe a] -> [Maybe b]
 map' f xs = do
   x <- xs          -- 1
   return $ f <$> x -- 2
@@ -180,6 +180,6 @@ lift $ putStrLn $ result ++ ": Continue"
 
 In part 1. We started by showing what happened when we need to wrap our monadic values (i.e. `Maybe a`) in another type (`[]` and `IO`). We also showed a glimpse of the *transformer* version that we'll cover in next post.
 
-In [next post]({{< ref "monad-transformers-2" >}}), we'll take a look in more details on how does it actually work.
+In [next post](), we'll take a look in more details on how does it actually work.
 
 {{% donate %}}

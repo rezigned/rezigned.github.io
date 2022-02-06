@@ -38,8 +38,9 @@ headTitle = "rezigned"
 Description = "Code is art - ∀𝑥 ∈ 𝑝𝑒𝑜𝑝𝑙𝑒, ∃𝑥 ♡ λ"
 extraHead = ''
 extraCSSFiles = ["css/main.css"]
-# ga = "UA-28430747-1"
+ga = "UA-28430747-1"
 # comments = '<script src="https://utteranc.es/client.js" repo="rezigned/rezigned.github.io" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script>'
+comments = '<script src="https://giscus.app/client.js" data-repo="rezigned/rezigned.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNDcyNjU1" data-category="General" data-category-id="DIC_kwDOACW6z84CBBq9" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="en" crossorigin="anonymous" async></script>'
 
 [[params.socials]]
 name = "About Me"
